@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.io.InputStream;
 import java.sql.BatchUpdateException;
@@ -13,28 +15,13 @@ import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     Button mypageBtn, loginBtn;
+    ImageButton searchBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        InputStream inputStream = getResources().openRawResource(R.raw.earthquake_shelter);
 
-        Scanner scanner = new Scanner(inputStream);
-        ArrayList<EarthquakeShelter> list = new ArrayList<>();
-
-        scanner.nextLine();
-        while(scanner.hasNextLine()){
-            String[] data = scanner.nextLine().split(",");
-            try {
-                list.add(new EarthquakeShelter(data[2], Double.parseDouble(data[6]), Double.parseDouble(data[5])));
-            }catch(NumberFormatException e){
-                continue;
-            }catch(ArrayIndexOutOfBoundsException e){
-                continue;
-            }
-        }
-        scanner.close();
 
         mypageBtn = (Button)findViewById(R.id.main_my_page);
         loginBtn =(Button)findViewById(R.id.main_login);
@@ -53,5 +40,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        searchBtn = (ImageButton)findViewById(R.id.search_list);
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Moive_list.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
