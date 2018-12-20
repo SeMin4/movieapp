@@ -7,12 +7,26 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="마이 페이지" />
+        android:layout_gravity="right"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/main_my_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마이 페이지" />
+
+        <Button
+            android:id="@+id/main_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인" />
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"

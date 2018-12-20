@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Payment" />
-        <activity android:name=".SeatActivity"></activity>
+        <activity android:name=".SeatActivity" />
+        <activity android:name=".Mypage" />
+        <activity android:name=".Login" />
+        <activity android:name=".Signup" />
+        <activity android:name=".Reservation_modified"></activity>
     </application>
 
 </manifest>
