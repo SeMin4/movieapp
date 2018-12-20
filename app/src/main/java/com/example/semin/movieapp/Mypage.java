@@ -17,7 +17,11 @@ public class Mypage extends AppCompatActivity {
             user_id.setText(MainActivity.list.get(MainActivity.user_status).getId());
             TextView point = (TextView)findViewById(R.id.point);
             point.setText(MainActivity.list.get(MainActivity.user_status).getPoint());
+
+            TextView textView = (TextView)findViewById(R.id.reservation);
+
         }
 
     }
 }
+

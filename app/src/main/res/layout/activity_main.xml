@@ -40,11 +40,11 @@
             android:layout_weight="3"
             android:hint="영화 이름 검색" />
 
-        <ImageButton
+        <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            />
+            android:text="검색"/>
     </LinearLayout>
 
     <TextView

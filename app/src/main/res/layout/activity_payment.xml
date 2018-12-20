@@ -51,6 +51,7 @@
                 android:textSize="30dp" />
 
             <EditText
+                android:id="@+id/adult"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -69,6 +70,7 @@
                 android:textSize="30dp" />
 
             <EditText
+                android:id="@+id/child"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
