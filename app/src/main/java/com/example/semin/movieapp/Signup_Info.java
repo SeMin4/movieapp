@@ -6,13 +6,15 @@ public class Signup_Info {
     private String password;
     private String card_type;
     private String card_number;
+    private String point;
 
-    public Signup_Info(String id, String email, String password, String card_type, String card_number) {
+    public Signup_Info(String id, String email, String password, String card_type, String card_number, String point) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.card_type = card_type;
         this.card_number = card_number;
+        this.point = point;
     }
     public Signup_Info(){
 
@@ -55,5 +57,13 @@ public class Signup_Info {
 
     public void setCard_number(String card_number) {
         this.card_number = card_number;
+    }
+
+    public String getPoint() {
+        return point;
+    }
+
+    public void setPoint(String point) {
+        this.point = point;
     }
 }

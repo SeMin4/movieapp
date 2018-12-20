@@ -1,6 +1,7 @@
 package com.example.semin.movieapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,9 +55,13 @@ public class Signup extends AppCompatActivity {
                         result+= signup_card_type_edit.getText().toString();
                         result += ",";
                         result += signup_card_number_edit.getText().toString();
+                        result += ",";
+                        result += "0";
                         bw.write(result);
                         bw.write("\n");
                         bw.close();
+                        Toast.makeText(getApplicationContext(),"회원가입을 축하합니다~!",Toast.LENGTH_LONG).show();
+                        finish();
                         // Toast.makeText(ChatLog.this, "저장완료", Toast.LENGTH_SHORT).show();
                     } catch (FileNotFoundException e) {
                         Toast.makeText(Signup.this, "File not found", Toast.LENGTH_SHORT).show();
