@@ -6,7 +6,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -18,6 +20,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     Button mypageBtn, loginBtn;
+    ImageButton searchBtn;
+
     static int login_status = 0;
     public static ArrayList<Signup_Info> list = new ArrayList<>();
     public static int user_status ;
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         mypageBtn = (Button)findViewById(R.id.main_my_page);
         loginBtn =(Button)findViewById(R.id.main_login);
         mypageBtn.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        searchBtn = (ImageButton)findViewById(R.id.search_list);
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Moive_list.class);
+                startActivity(intent);
+            }
+        });
+
 
         try{
             BufferedReader buf = new BufferedReader(new FileReader( getFilesDir() +"user.txt"));

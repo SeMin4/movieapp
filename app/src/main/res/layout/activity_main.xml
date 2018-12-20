@@ -40,7 +40,11 @@
             android:layout_weight="3"
             android:hint="영화 이름 검색" />
 
+
         <Button
+
+
+            android:id="@+id/search_list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

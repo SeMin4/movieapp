@@ -21,7 +21,8 @@
         <activity android:name=".Mypage" />
         <activity android:name=".Login" />
         <activity android:name=".Signup" />
-        <activity android:name=".Reservation_modified"></activity>
+        <activity android:name=".Reservation_modified" />
+        <activity android:name=".Moive_list"></activity>
     </application>
 
 </manifest>
