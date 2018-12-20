@@ -19,10 +19,18 @@ public class Payment extends AppCompatActivity {
     Button backbutton;
     TextView seat;
     ArrayList<String> list;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+
+        TextView cardcomp = (TextView)findViewById(R.id.cardcomp);
+        TextView cardnum = (TextView)findViewById(R.id.cardnum);
+        Signup_Info info = MainActivity.list.get(MainActivity.user_status);
+
+        cardcomp.setText(info.getCard_type());
+        cardnum.setText(info.getCard_number());
 
         String seatstr="";
         Intent intent =getIntent();

@@ -66,17 +66,21 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/bohamin"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:background="@drawable/rap_so" />
+                android:background="@drawable/rap_so"
+                android:onClick="onClickButton" />
 
             <Button
+                android:id="@+id/poison"
                 android:layout_marginLeft="5dp"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:background="@drawable/poison" />
+                android:background="@drawable/poison"
+                android:onClick="onClickButton"/>
         </TableRow>
 
         <TableRow
@@ -85,17 +89,21 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="23dp"
+                android:id="@+id/aqua"
+                android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:background="@drawable/aqua" />
+                android:background="@drawable/aqua"
+                android:onClick="onClickButton"/>
 
             <Button
+                android:id="@+id/swing"
                 android:layout_marginLeft="5dp"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_weight="1"
-                android:background="@drawable/green"/>
+                android:background="@drawable/swing"
+                android:onClick="onClickButton"/>
         </TableRow>
 
     </TableLayout>
